@@ -13,7 +13,7 @@ public class HomePage extends WebPage {
 	@Override
 	protected void onInitialize() {
 		super.onInitialize();
-		PropertyModel<String> feldModel = new PropertyModel<String>(this,
+		final PropertyModel<String> feldModel = new PropertyModel<String>(this,
 				"feldInhalt");
 		Form formular = new Form("formular") {
 
@@ -22,7 +22,7 @@ public class HomePage extends WebPage {
 			@Override
 			protected void onSubmit() {
 
-				this.setResponsePage(new AusgabePage(feldInhalt));
+				this.setResponsePage(new AusgabePage(feldModel));
 
 			}
 		};

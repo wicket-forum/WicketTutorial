@@ -7,21 +7,20 @@ import org.apache.wicket.model.PropertyModel;
 public class AusgabePage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
-	private String nachrichtInhalt;
+	private PropertyModel<String> nachrichtInhalt;
 
-	public AusgabePage(String nachricht) {
+	public AusgabePage(PropertyModel<String> nachricht) {
 		super();
 		this.nachrichtInhalt = nachricht;
-		PropertyModel<String> model = new PropertyModel<>(this,
-				"nachrichtInhalt");
-		add(new Label("nachricht", model));
+
+		add(new Label("nachricht", nachrichtInhalt));
 	}
 
-	public String getNachrichtInhalt() {
+	public PropertyModel<String> getNachrichtInhalt() {
 		return nachrichtInhalt;
 	}
 
-	public void setNachrichtInhalt(String nachrichtInhalt) {
+	public void setNachrichtInhalt(PropertyModel<String> nachrichtInhalt) {
 		this.nachrichtInhalt = nachrichtInhalt;
 	}
 
