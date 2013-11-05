@@ -16,11 +16,14 @@
 		</div>
 		<div id="bd">
 			<h3>Nachrichteneingabe</h3>
+			
         <form wicket:id="formular">
-            <input wicket:id="feld" type="text"> 
+            <input wicket:id="benutzerName" type="text">  
+            <input wicket:id="nachricht" type="text">
             <input type="submit"/>
 
         </form>
+        <a wicket:id="ausgabeLink">Ausgabe ohne FormSubmit</a>
 		</div>
 		<div id="ft">
 		powered by www.wicket-forum.de
