@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
-	<head>
-		<meta charset="utf-8" />
-		<title>Apache Wicket Tutorial  Teil 3: komplexere Modelle</title>
-		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
-		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
-	</head>
-	<body>
-		<div id="hd">
-			<div id="logo">
-				<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
-				<h1>Apache Wicket Tutorial</h1>
-           
-			</div>
-		</div>
-		<div id="bd">
-			<h3>Nachrichteneingabe</h3>
-			
-        <form wicket:id="formular">
-            <input wicket:id="benutzerName" type="text">  
-            <input wicket:id="nachricht" type="text">
-            <input type="submit"/>
+<head>
+<meta charset="utf-8" />
+<title>Apache Wicket Tutorial Teil 3: komplexere Modelle</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div id="hd">
+		<div id="logo">
+			<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+			<h1>Apache Wicket Tutorial</h1>
 
-        </form>
-        <a wicket:id="ausgabeLink">Ausgabe ohne FormSubmit</a>
 		</div>
-		<div id="ft">
-		powered by www.wicket-forum.de
-		</div>
-	</body>
+	</div>
+	<div id="bd">
+		<h3>Nachrichteneingabe</h3>
+
+		<form wicket:id="formular">
+			 <input
+				wicket:id="code" type="text"> <input type="submit" /> 
+				<input type="submit" wicket:id="ajaxButton" value="ajax"></input>
+
+		</form>
+		<a wicket:id="ausgabeLink">Ausgabe ohne FormSubmit</a>
+	<div wicket:id="cont">
+		<img wicket:id="image" />
+	</div>
+	</div>
+
+	<div id="ft">powered by www.wicket-forum.de</div>
+</body>
 </html>
